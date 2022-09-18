@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 const AddTask = ({ tasks, addTask }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [priority, setPriority] = useState("");
+  const [priority, setPriority] = useState("3");
 
   const navigate = useNavigate();
 
@@ -67,7 +67,7 @@ const AddTask = ({ tasks, addTask }) => {
               <select
                 className="form-control my-3"
                 placeholder="Priority"
-                value={priority ? priority : '3'}
+                value={priority}
                 onChange={(e) => setPriority(e.target.value)}
               >
                 <option value='3'>High</option>

@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 const Home = ({ tasks, deleteTask }) => {
 
   const getPriority = (priority) => {
-    switch(priority) {
-      case '1' : return 'Low';
-      case '2' : return 'Medium';
-      case '3' : return 'High';
+    switch(parseInt(priority)) {
+      case 1 : return 'Low';
+      case 2 : return 'Medium';
+      case 3 : return 'High';
       default: return 'High'
     }
   }
