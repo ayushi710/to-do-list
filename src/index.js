@@ -12,9 +12,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { taskReducer } from "./redux/reducers/taskReducer";
-import { composeWithDevTools } from "redux-devtools-extension";
+import middleware from "./redux/middleware"
 
-const store = createStore(taskReducer, composeWithDevTools());
+const store = createStore(taskReducer, middleware);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
